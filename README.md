@@ -1,4 +1,4 @@
-# Distributed ADMM Logistic Regression — gRPC Coordinator Architecture
+# Distributed ADMM Logistic Regression: gRPC Coordinator Architecture
 
 A distributed optimization system for large-scale logistic regression using ADMM (Alternating Direction Method of Multipliers). Workers run local gradient descent in parallel and synchronize through a gRPC coordinator service — no centralized data, no single point of computation.
 
@@ -144,4 +144,4 @@ sbatch logistic_admm.slurm
 
 ## Why gRPC over MPI.Allreduce
 
-MPI collectives require a homogeneous cluster — every rank must be alive and reachable. The gRPC coordinator decouples workers from the transport layer: workers can run on any machine, connect over a network, and the coordinator handles aggregation independently. Same ADMM math, production-grade communication.
+MPI collectives require a homogeneous cluster- every rank must be alive and reachable. The gRPC coordinator decouples workers from the transport layer: workers can run on any machine, connect over a network, and the coordinator handles aggregation independently. Same ADMM math, production-grade communication.
