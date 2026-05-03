@@ -1,0 +1,27 @@
+syntax = "proto3";
+package admm;
+
+service Coordinator {
+  rpc AggregateGradients (LocalUpdate) returns (ConsensusVector);
+  rpc GetMetrics (Empty) returns (TrainingMetrics);
+}
+
+message LocalUpdate {
+  int32 rank = 1;
+  repeated double x_plus_u = 2;
+}
+
+message ConsensusVector {
+  repeated double z = 1;
+  int32 iteration = 2;
+  bool converged = 3;
+}
+
+message TrainingMetrics {
+  int32 iteration = 1;
+  double primal_residual = 2;
+  double dual_residual = 3;
+  bool converged = 4;
+}
+
+message Empty {}

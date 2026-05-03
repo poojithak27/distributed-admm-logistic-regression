@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.out
+*.err
+*.csv
+data/
+venv/
+mpi_env_mpich/
+.DS_Store
+.vscode/
