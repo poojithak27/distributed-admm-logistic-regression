@@ -1,6 +1,6 @@
 # Distributed ADMM Logistic Regression: gRPC Coordinator Architecture
 
-A distributed optimization system for large-scale logistic regression using the ADMM (Alternating Direction Method of Multipliers) algorithm. Workers run local gradient descent in parallel and synchronize through a gRPC coordinator service — no centralized data, no single point of computation.
+A distributed optimization system for large-scale logistic regression using the ADMM (Alternating Direction Method of Multipliers) algorithm. Workers run local gradient descent in parallel and synchronize through a gRPC coordinator service, no centralized data, no single point of computation.
 
 Deployed originally on a 10-rank MPI cluster (SeaWulf HPC, 96-core partition). Architecture refactored to gRPC for heterogeneous deployment.
 
