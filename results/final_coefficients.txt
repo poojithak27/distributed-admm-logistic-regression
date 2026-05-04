@@ -1,0 +1,11 @@
+# ADMM Logistic Regression — Final Results
+# SeaWulf HPC | 10 MPI ranks | 10 CSV partitions
+# Convergence: ~150 iterations
+
+Parameter      Estimate
+intercept      0.177748296801801
+x1             0.172671836707116
+x2             0.022031930047293
+x3            -0.006996108920714
+x4             0.116400453181147
+x25            0.242867307231154
